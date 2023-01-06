@@ -1,0 +1,232 @@
+@charset "UTF-8";
+
+/* ---------------------------- 
+        01 := google fonts 
+---------------------------- */
+@font-face {
+    font-family: 'poppins';
+    src: url('fonts/poppins-extrabold-webfont.eot');
+    src: url('fonts/poppins-extrabold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/poppins-extrabold-webfont.woff2') format('woff2'),
+         url('fonts/poppins-extrabold-webfont.woff') format('woff'),
+         url('fonts/poppins-extrabold-webfont.ttf') format('truetype'),
+         url('fonts/poppins-extrabold-webfont.svg#poppinsextrabold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+
+/* ----------------------------
+        02 := variables
+---------------------------- */
+:root{
+    --coraille: #ed786a;
+    --gris: #e5e5e5;
+    --gris-anthracite: #878787;
+    --gris-bordure: #ebebeb;
+    --gris-lien: #888;
+    --noir: #000;
+    --blanc: #FFF;
+}
+
+/* ---------------------------- 
+        03 := base
+---------------------------- */
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a, a:hover{
+    text-decoration: none;
+    color: var(--blanc);
+}
+
+figure img{
+    width: 100%;
+}
+
+.btn{
+    background-color: var(--coraille);
+    color: white;
+    height: 7vh;
+}
+
+.btn i{
+    color: var(--blanc);
+    opacity: .3;
+}
+
+.btn:hover{
+    background-color: var(--coraille);
+    color: white;
+    height: 7vh;
+}
+
+.btn:hover i{
+    color: var(--blanc);
+    opacity: .3;
+}
+
+.zoom{
+    transition: transform .2s;
+}
+
+.zoom:hover {
+    transform: scale(1.5);  /* les images des cards */
+}
+
+.zoom1:hover {
+    transform: scaleY(1.8);   /* les deux images en bas */
+} 
+
+/* ---------------------------- 
+        04 := header
+---------------------------- */
+h1{
+    font-family: 'Poppins', sans-serif;
+}
+
+.dropdown-toggle::after{  /* pour enlever la fleche a cote du menu deroulant */
+    display: none;
+}
+
+header ul li a, h2{
+    color: var(--gris-lien) !important;
+}
+
+header h1{
+    color: var(--coraille);
+}
+
+header li i{
+    color: var(--gris-anthracite);
+    border-radius: 50%;
+    font-size: 1rem;
+    margin-right: .3rem;
+}
+
+header li a:hover{
+    color: var(--coraille) !important;
+}
+
+header li a:hover i{
+    color: var(--coraille) !important;
+}
+
+/* ---------------------------- 
+        05 := section1
+---------------------------- */
+.sect1 .card-body{
+    color: var(--gris-lien);
+}
+
+.sect1 .card-body p{
+    font-size: 0.7rem;
+}
+
+.sect1 .card-body strong{
+    color: var(--noir);
+}
+
+.sect1 button, .sect1 button:hover{
+    background-color: var(--gris);
+}
+
+.sect1 button a{
+    font-weight: bold;
+    opacity: 0.5;
+}
+
+.sect1 button i, .sect1 button a, .sect1 button:hover i, .sect1 button:hover a{
+    color: var(--coraille);
+}
+
+/* ---------------------------- 
+        06 := section2
+---------------------------- */
+.h-60{
+    height: 60vh;
+}
+
+/* ---------------------------- 
+        07 := section3
+---------------------------- */
+.sect3 h2{
+    font-size: 1.3rem;
+}
+
+.sect3 h5, .sect3 p{
+    font-size: 1rem;
+    color: var(--gris-anthracite);
+}
+
+.sect3 .accordion-button::after{  /* pour enlever la fleche de l'accordeon*/
+    display: none;
+}
+
+.sect3 .accordion-button{
+    background-color: var(--gris-anthracite);
+    color: var(--blanc);
+}
+
+.sect3 .second{
+    background-color: var(--blanc);
+    color: var(--noir);
+}
+
+.sect3 .accordion-item figure{
+    border: 8px solid var(--gris-bordure);
+}
+
+.sect3 .accord2 .accordion-button{
+    background-color: var(--gris-anthracite);
+    opacity: .5;
+}
+
+/* ---------------------------- 
+        08 := footer
+---------------------------- */
+footer{
+    background-color: var(--gris-bordure);
+}
+
+footer ul li{
+    list-style-type: none;
+}
+
+form input{
+    width: 48% !important;
+    margin-bottom: 3%;
+}
+
+form input[type='text']{
+    margin-right: 4%;
+}
+
+form input, form textarea{
+    background-color: white;
+    opacity: .7;
+}
+
+form input::placeholder, form textarea::placeholder{
+    color: #000;
+}
+
+.contact{
+    color: var(--gris-anthracite);
+}
+
+.contact i{
+    color: var(--gris);
+    background-color: var(--gris-anthracite);
+    padding: .3rem .4rem;
+    border-radius: 50%;
+}
+
